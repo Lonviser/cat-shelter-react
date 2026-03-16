@@ -1,0 +1,134 @@
+@import '../../index.scss';
+
+.section {
+  margin-bottom: 60px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  &.centered {
+    text-align: center;
+    
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.newsGrid {
+  @include grid(300px, 20px);
+}
+
+.petsGrid {
+  @include grid(250px, 20px);
+}
+
+.successGrid {
+  @include grid(200px, 20px);
+}
+
+.donationBlock {
+  background: linear-gradient(135deg, var(--primary-color), #45a049);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  color: white;
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  button {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.successCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imagePlaceholder {
+    width: 100%;
+    height: 150px;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    border: 2px dashed var(--border-color);
+  }
+  
+  h3 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}

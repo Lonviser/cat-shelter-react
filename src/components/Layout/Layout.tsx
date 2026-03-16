@@ -1,23 +1,31 @@
-// src/components/Layout/Layout.tsx
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import styles from './Layout.module.scss';
 
 export const Layout = () => {
+  const location = useLocation();
+  
   return (
-    <div>
-      <header style={{ padding: '20px', background: '#f0f0f0' }}>
-        <nav style={{ display: 'flex', gap: '20px' }}>
-          <Link to="/">Главная</Link>
-          <Link to="/catalog">Каталог</Link>
-          <Link to="/news">Новости</Link>
+    <div className={styles.layout}>
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <Link to="/" className={location.pathname === '/' ? styles.active : ''}>
+            Главная
+          </Link>
+          <Link to="/catalog" className={location.pathname === '/catalog' ? styles.active : ''}>
+            Каталог
+          </Link>
+          <Link to="/news" className={location.pathname === '/news' ? styles.active : ''}>
+            Новости
+          </Link>
         </nav>
       </header>
       
-      <main style={{ padding: '20px' }}>
-        <Outlet /> {/* Здесь будут рендериться страницы */}
+      <main className={styles.main}>
+        <Outlet />
       </main>
       
-      <footer style={{ padding: '20px', background: '#f0f0f0', marginTop: '20px' }}>
-        © 2026 Кошки Вашего двора
+      <footer className={styles.footer}>
+        © 2025 Кошки Вашего двора
       </footer>
     </div>
   );
