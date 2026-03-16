@@ -1,9 +1,11 @@
+// src/app/router.tsx
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../components/Layout/Layout';
+import { NewsPage } from '../pages/NewsPage'; 
 
+// Заглушки для других страниц
 const HomePage = () => <div>Главная страница</div>;
 const CatalogPage = () => <div>Каталог котиков</div>;
-const NewsPage = () => <div>Новости</div>;
 const NotFoundPage = () => <div>404 - Страница не найдена</div>;
 
 export const router = createBrowserRouter([
@@ -13,7 +15,7 @@ export const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <HomePage />,
       },
       {
@@ -22,7 +24,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'news',
-        element: <NewsPage />,
+        element: <NewsPage />, 
       },
     ],
   },
