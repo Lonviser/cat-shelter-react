@@ -72,7 +72,7 @@ export const HomePage: React.FC = () => {
         <h2 className={styles.sectionTitle}>Наши подопечные</h2>
         <div className={styles.petsGrid}>
           {pets.map((pet) => (
-            <PetCard key={pet.id} name={pet.name} breed={pet.breed} />
+            <PetCard key={pet.id} name={pet.name} age={0} />
           ))}
         </div>
       </section>
