@@ -1,15 +1,22 @@
 import styles from './Header.module.scss';
-import { NavLink } from 'react-router-dom'; 
+import { Link, NavLink } from 'react-router-dom'; 
 import logo from '@/assets/img/logo.svg';
 import vk from '@/assets/img/vk.svg';
+ 
 
 export const Header = () => {
   return (
     <header className={styles.header}>
 
     <div className={styles.headerContainer}>
-        <img src={logo} alt="Логотип кошки вашего двора" className={styles.logo} />
-        <div className={styles.headerMain}>
+            <Link to="/" className={styles.logoLink} aria-label="На главную страницу">
+                <img 
+                src={logo} 
+                alt="Логотип «Кошки Вашего двора»" 
+                className={styles.logo} 
+                />
+            </Link>
+            <div className={styles.headerMain}>
             <div className={styles.header1}>
                 <input placeholder="Поиск" className={styles.search} type="text" />
                 <div className={styles.contacts}>
@@ -47,10 +54,10 @@ export const Header = () => {
                     БЛОГ
                 </NavLink>
                 <NavLink 
-                    to="/home-hospital"  
+                    to="/news"  
                     className={({ isActive }) => isActive ? styles.active : ''}
                     >
-                    ДОМАШНИЙ СТАЦИОНАР
+                    НОВОСТИ
                 </NavLink>
                  <NavLink 
                     to="/reviews"  
