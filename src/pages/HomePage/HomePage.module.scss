@@ -10,7 +10,7 @@
 
 .title {
   font-size: 2.5rem;
-  color: var(--text-color);
+  color: white;
   margin-bottom: 20px;
   text-align: center;
   
@@ -45,9 +45,13 @@
   }
 }
 
+.container {
+  @include container;
+}
+
 .description {
   font-size: 1.2rem;
-  color: var(--text-light);
+  color: white;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
@@ -130,5 +134,39 @@
     color: var(--text-color);
     margin: 0;
     font-size: 1.2rem;
+  }
+}
+
+.sectionAbout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 900px;
+  width: 100%;
+  background-image: url('../../assets/img/about-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btnAbout{
+  width: 240px;
+  height: 60px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-hover);
   }
 }

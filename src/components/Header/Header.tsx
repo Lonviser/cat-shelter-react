@@ -11,37 +11,54 @@ export const Header = () => {
         <img src={logo} alt="Логотип кошки вашего двора" className={styles.logo} />
         <div className={styles.headerMain}>
             <div className={styles.header1}>
-                <input type="text" />
-                <div>
+                <input placeholder="Поиск" className={styles.search} type="text" />
+                <div className={styles.contacts}>
                     <a href="">+79303025121</a>
                     <a href="">+79935662070</a>
                     <img src={vk} alt="Вконтакте" className={styles.vk} />
-                    <div>
+                    <div className={styles.helpBtn}>
                         помочь
                     </div>
                 </div>
             </div>
             <nav className={styles.nav}>
                 <NavLink 
-                to="/"  
-                className={({ isActive }) => isActive ? styles.active : ''}
-                >
-                Главная
+                    to="/about-us"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    О НАС
                 </NavLink>
-                
                 <NavLink 
-                to="/catalog" 
-                className={({ isActive }) => isActive ? styles.active : ''}
-                >
-                Каталог
+                    to="/help"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    ПОМОЧЬ
                 </NavLink>
-                
                 <NavLink 
-                to="/news" 
-                className={({ isActive }) => isActive ? styles.active : ''}
-                >
-                Новости
+                    to="/get-cat"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    ВЗЯТЬ КОТИКА
                 </NavLink>
+                <NavLink 
+                    to="/blog"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    БЛОГ
+                </NavLink>
+                <NavLink 
+                    to="/home-hospital"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    ДОМАШНИЙ СТАЦИОНАР
+                </NavLink>
+                 <NavLink 
+                    to="/reviews"  
+                    className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                    ОТЗЫВЫ
+                </NavLink>
+
             </nav>
         </div>
       </div>

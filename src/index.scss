@@ -6,19 +6,18 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   background-color: #f8f9fa;
   color: #333;
 }
 
 // Переменные
 :root {
-  --primary-color: #4CAF50;
-  --primary-hover: #45a049;
+  --primary-color: #EBCEA2;
+  --primary-hover: #AF7044;
+  --accent: rgb(175, 112, 68);
+  --second-color: 9E975E;
   --text-color: #333;
   --text-light: #666;
   --border-color: #e0e0e0;
